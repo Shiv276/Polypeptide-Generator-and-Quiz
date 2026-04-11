@@ -1,5 +1,11 @@
 # Peptide Generator and Quiz
 
+## Download
+A Windows build is available in the [Releases](../../releases/latest) section.
+
+Download `PeptideQuiz-windows.zip`, extract it, and run `PeptideQuiz.exe`.
+
+
 ## Description:
 
 ### A: Overview
