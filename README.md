@@ -1,1 +1,0 @@
-# Polypeptide-Generator-and-Quiz
