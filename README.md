@@ -11,19 +11,19 @@ Download `PeptideQuiz-windows.zip`, extract it, and run `PeptideQuiz.exe`.
 ### A: Overview
 This project is an interactive peptide / Amino Acid (AA) structure quiz. When run, the user has a choice of difficulty, from single Amino Acid structures all the way to 10-mer peptides (10 AAs long).
 
- They are presented with 10 questions (sequentially) which display a randomly generated molecule, and are prompted to type its sequence in Single-Letter Amino Acid code. If the answer is incorrect, users can review feedback for as long as they like before moving to the next question. Scores and answers are all recorded and presented at the end.
+They are presented with 10 questions (sequentially) which display a randomly generated molecule, and are prompted to type its sequence in Single-Letter Amino Acid code. If the answer is incorrect, users can review feedback for as long as they like before moving to the next question. Scores and answers are all recorded and presented at the end.
 
 #### **Who is it for?** 
-This project is mainly aimed towards undergraduate students in pre-medicine and the general field of biochemistry, where a strong understanding of amino acid / peptide structure is crucial for success.
+This is mainly aimed towards undergraduate students in the general field of Biochemistry (and analogous fields) or pre-medicine, where a strong understanding of amino acid / peptide structure is required.
 
-#### **What motivated me to make this?**
+#### **What motivated me to make this / Why is it useful?**
 As a third year Biochemistry/Genetics undergraduate who is particularly interested in peptide chemistry, I recall my own journey in learning Amino Acid structures where I struggled to find any reputable resources outside of my own memory and poorly structured websites (if any). Most quizzes test single Amino Acids and are essentially testing how well you can remember where each label goes over each iteration of the quiz, rather than developing a true understanding. My quiz constructs larger complex biomolecules from the basic AA building blocks with a partially folded conformation in a way that is completely new (random) for each molecule. Another advantage of my quiz (over the current quizzes) is the cleaner 2D structure that conforms to the modern design of organic molecules on paper. Furthermore, online quizzes that present peptides (many AAs together) are either extremely hard to find or do not exist from my anecdotal experience. <br>
-The quiz and molecule-builder itself is fast enough to provide a polypeptide instantly per question, however it may not be optimised in terms of speed or memory since I am in Biochemistry and not Computer Science. Scientists do have a reputation for not being the most efficient programmers - but it does get the job done.
+The quiz and molecule-builder itself is fast enough to provide a polypeptide instantly per question, however it may not be optimised in terms of speed or memory since my skills are more heavily geared towards the physical and natural sciences rather than Computer Science. Scientists do have a reputation for not being the most efficient programmers - but it does get the job done.
 
 --------------
 
 #### **Prerequisites to run the quiz**
-
+##### If not using the application from the ```Download``` section (currently Windows only), you must download all 6 files (outside of README) and run from terminal 
 You will need to install both rdkit and pillow libraries. The rest are included with Python.
 Run:
 
@@ -31,8 +31,8 @@ Run:
 
 ```pip install rdkit```
 
-Ensure all required files are included. You will need the **```images```** folder for the icon, **```forest-dark.tcl```** and **```forest-dark```** folder (both) in order to run the Forest Dark theme without errors.. <br><br>
-I am working on either building this into an executable app or website where everything can be included at once. For now, it is merely a proof-of-concept where I have shown that it is possible by me, and I may expand on its implementation later on when I have time outside of studies.
+Ensure all required files are included. You will need the **```images```** folder for the icon, **```forest-dark.tcl```** and **```forest-dark```** folder (both) in order to run the Forest Dark theme. <br><br>
+I am working on either building this into an executable app or website where everything can be included at once. For now, it is mostly a proof-of-concept where I have shown that it is possible by me, and I may expand on its implementation later on when I have time outside of studies.
 
 #### Key Features
 - Random peptide generation (1–10 residues)
