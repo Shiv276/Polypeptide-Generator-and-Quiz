@@ -27,7 +27,17 @@ class PeptideQuiz:
         self.results = [] #Qnum, User, Answer, ✓/✗
 
         self.root.title("Peptide Quiz")
-        self.root.geometry("800x800")
+
+        #Dynamically pick frame size based on screen (fixes earlier problem on small screens)
+        screen_w = self.root.winfo_screenwidth()
+        screen_h = self.root.winfo_screenheight()
+
+        win_w = min(900, int(screen_w * 0.8))
+        win_h = min(850, int(screen_h * 0.85))
+
+        self.root.geometry(f"{win_w}x{win_h}")
+
+
 
         self.header = tk.Label(self.root, text="", font=("Arial", 12)) #Question Number and Score
         self.header.pack(padx = 5, pady=5)
@@ -97,8 +107,8 @@ class PeptideQuiz:
             rdDepictor.Compute2DCoords(mol)
 
 
-
-        d = rdMolDraw2D.MolDraw2DCairo(600,600) #Alternate lower level drawing method that allows background colour changes (unlike original Draw.Draw.MolToImage)
+        draw_size = 450 if self.root.winfo_screenheight() < 900 else 600
+        d = rdMolDraw2D.MolDraw2DCairo(draw_size, draw_size)  #Alternate lower level drawing method that allows background colour changes (unlike original Draw.Draw.MolToImage)
         opts = d.drawOptions()
         rdMolDraw2D.SetDarkMode(d) #Sets bonds to White, and overall chemical structure to be visible with a dark background (and black background)
         opts.setBackgroundColour((0.129, 0.129, 0.129))  #reset the black background to a dark-modeish grey colour
@@ -221,7 +231,20 @@ class LaunchQuiz:
         ttk.Style().theme_use('forest-dark')
 
         self.root.title("Peptide Quiz Setup")
-        self.root.geometry("1400x850")
+        
+
+        #Dynamically set frame size (fixes earlier problem on smaller screens)
+        screen_w = self.root.winfo_screenwidth()
+        screen_h = self.root.winfo_screenheight()
+
+        win_w = min(1400, int(screen_w * 0.9))
+        win_h = min(850, int(screen_h * 0.9))
+
+        self.root.geometry(f"{win_w}x{win_h}")
+
+
+
+
         self.root.config(cursor="gobbler")
 
 
@@ -276,6 +299,12 @@ class LaunchQuiz:
         #Load images
         folded_img = Image.open("images/mol_folded.png")
         linear_img = Image.open("images/mol_linear.png")
+
+        max_w = 500 if screen_w > 1400 else 380
+        max_h = 300 if screen_h > 900 else 230
+
+        folded_img.thumbnail((max_w, max_h))
+        linear_img.thumbnail((max_w, max_h))
 
         self.folded_photo = ImageTk.PhotoImage(folded_img)
         self.linear_photo = ImageTk.PhotoImage(linear_img)
