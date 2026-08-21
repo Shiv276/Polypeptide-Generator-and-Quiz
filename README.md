@@ -98,7 +98,7 @@ I am very new to the rdkit module used to work with molecules and chemistry in g
 <details>
   <summary>Click to expand/collapse - A crash course in the bare fundamentals of peptide chemistry (useful but not entirely necessary to understand this project as a reader)</summary>
 
-Amino Acids are small molecules with a common 'backbone' that consists of a Amine (NH2), Carboxyl group (COOH) - both bound to a central carbon called Carbon Alpha. Carbon Alpha has one hydrogen bound to it with space for one more bond. This bond is typically denoted as the 'R' group since it can technically contain anything - It is the variable region of all amino acids. That is - All Amino Acids share the common backbone, and only differ in R groups.
+Amino Acids are small molecules with a common 'backbone' that consists of an Amine (NH2) and Carboxyl group (COOH) - both bound to a central carbon called Carbon Alpha. Carbon Alpha has one hydrogen bound to it with space for one more bond. This bond is typically denoted as the 'R' group since it can technically contain anything - It is the variable region of all amino acids. That is - All Amino Acids share the common backbone, and only differ in R groups.
 ![Amino Acids](/images/Lehningers_amino_acids.png)
 
 Those R groups of the 20 common 'proteogenic' Amino Acids are highlighted here. These are the building blocks of peptides, which are folded and processed into Proteins intracellularly by organisms - They are also commonly referred to as the "end-point of DNA" wherein the unique information our DNA encodes for is the main driver of which Amino Acids are joined together during protein formation. 
