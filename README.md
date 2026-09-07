@@ -6,7 +6,7 @@ A Windows build is available in the [Releases](../../releases/latest) section.
 Download `PeptideQuiz-windows.zip`, extract it, and run `PeptideQuiz.exe`.
 
 ### UPDATE
-A web-version has been made. It is very unrefined and based entirely on the initial app design, but works functionally for now available here: <br><br>
+A web-version has been made. The format was largely auto-generated based on the GUI I manually built so that users who don't want to download a .exe can still have access. The functional and visual elements follow directly from the original app. It is available below  : <br><br>
 https://polypeptide-quiz.onrender.com <br><br>
 It is currently deployed on a free host, so it may take up to a minute to load if it has been inactive for a while (for the first time). This is because the server needs to wake up before the app can start. This is moreso a proof of concept for now.
 
