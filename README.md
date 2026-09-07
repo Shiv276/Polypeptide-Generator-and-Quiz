@@ -349,6 +349,9 @@ We can see visually (or draw the 'walk' yourself) that if we replicate this idea
 This means that the two lines intersect (collide). If this rule does NOT hold for both lines, the lines do not collide (once again easy to prove by drawing two lines that don't intersect and running this test)
 This is exactly what my function rotation_sign(px, py, qx, qy, rx, ry) tests for.
 
+
+This collision test is based on the standard counterclockwise (CCW) orientation test for line-segment intersection described by Sedgewick and Wayne in; ```Geometric Primitives. Algorithms, 4th Edition. Princeton University - Chapter 6.1```. They demonstrate how this condition can be evaluated using the sign of the determinant corresponding to the orientation of three points.
+
 When testing three points (ie, P, Q and R), if point R lays ON the same straight line segment as PQ, the points are colinear which will return an orientation value of 0 because the turn from vector P→Q to vector P→R is neither clockwise nor anticlockwise.
 I account for this in the check_colinear_case(px, py, qx, qy, rx, ry) function, where I define a collision as True if two points are colinear, and one point lays in the domain (if x) or range (if y) of the line it is colinear with. This essentially means; if colinear, the third point R that lays on the  line PQ must NOT be physically on the line segment, but instead on the same line but OUTSIDE of the segment that PQ encapsulates, meaning the atom is not INISIDE another bond.
 
